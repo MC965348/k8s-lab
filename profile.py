@@ -5,9 +5,9 @@ import geni.rspec.igext as IG
 pc = portal.Context()
 
 # Define parameters for both clusters
-pc.defineParameter("n1", "Number of nodes in Cluster 1 (2 or more)",
+pc.defineParameter("n1", "Number of nodes in Cluster 1 (2)",
                    portal.ParameterType.INTEGER, 2)
-pc.defineParameter("n2", "Number of nodes in Cluster 2 (3 or more)",
+pc.defineParameter("n2", "Number of nodes in Cluster 2 (3 or 4)",
                    portal.ParameterType.INTEGER, 3)
 pc.defineParameter("userid", "CloudLab user ID to deploy K8s from (should be your CloudLab ID. Defaulted to none",
                    portal.ParameterType.STRING, 'none')
