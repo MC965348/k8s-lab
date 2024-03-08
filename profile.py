@@ -12,9 +12,9 @@ pc.defineParameter("n2", "Number of nodes in Cluster 2 (3 or 4)",
 pc.defineParameter("userid", "CloudLab user ID to deploy K8s from (should be your CloudLab ID. Defaulted to none",
                    portal.ParameterType.STRING, 'none')
 pc.defineParameter("corecount", "Number of cores in each node.  NB: Make certain your requested cluster can supply this quantity.",
-                   portal.ParameterType.INTEGER, 2)
+                   portal.ParameterType.INTEGER, 4)
 pc.defineParameter("ramsize", "MB of RAM in each node.  NB: Make certain your requested cluster can supply this quantity.",
-                   portal.ParameterType.INTEGER, 2048)
+                   portal.ParameterType.INTEGER, 4096)
 params = pc.bindParameters()
 
 request = pc.makeRequestRSpec()
