@@ -34,13 +34,13 @@ def add_cluster_nodes(cluster_name, num_nodes, start_ip):
         if i == 0:
             node = request.XenVM(cluster_name + "-head")
             bs_landing = node.Blockstore(cluster_name + "_bs_image", "/image")
-            bs_landing.size = "500GB"
+            bs_landing.size = "50GB"
         else:
             node = request.XenVM(cluster_name + "-worker-" + str(i))
         node.cores = params.corecount
         node.ram = params.ramsize
         bs_landing = node.Blockstore(cluster_name + "_bs_" + str(i), "/image")
-        bs_landing.size = "500GB"
+        bs_landing.size = "50GB"
         node.routable_control_ip = "true"
         node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU22-64-STD"
         iface = node.addInterface("if" + str(i))
